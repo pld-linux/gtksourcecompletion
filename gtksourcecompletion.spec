@@ -1,4 +1,5 @@
 Summary:	Source code completion library
+Summary(pl.UTF-8):	Biblioteka dopełniania dla kodu źródłowego
 Name:		gtksourcecompletion
 Version:	0.5.2
 Release:	1
@@ -22,9 +23,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Source code completion library.
 
+%description -l pl.UTF-8
+Biblioteka dopełniania dla kodu źródłowego.
+
 %package devel
 Summary:	Header files for gtksourcecompletion library
-Summary(pl.UTF-8):	Pliki nagłówkowe bibliotekgtksourcecompletion
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki gtksourcecompletion
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -48,11 +52,15 @@ Statyczna biblioteka gtksourcecompletion.
 
 %package apidocs
 Summary:	gtksourcecompletion API documentation
+Summary(pl.UTF-8):	Dokumentacja API biblioteki gtksourcecompletion
 Group:		Documentation
 Requires:	gtk-doc-common
 
 %description apidocs
 gtksourcecompletion API documentation.
+
+%description apidocs -l pl.UTF-8
+Dokumentacja API biblioteki gtksourcecompletion.
 
 %prep
 %setup -q
@@ -84,16 +92,19 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO NEWS TODO
-%attr(755,root,root)    %{_libdir}/libgtksourcecompletion-1.0.so.1.0.0
-%{_includedir}/gtksourcecompletion-1.0
+%attr(755,root,root) %{_libdir}/libgtksourcecompletion-1.0.so.1.0.0
+%attr(755,root,root) %ghost %{_libdir}/libgtksourcecompletion-1.0.so.1
 %{_datadir}/gtksourcecompletion
 
 %files devel
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libgtksourcecompletion-1.0.so
 %{_libdir}/libgtksourcecompletion-1.0.la
-%{_libdir}/libgtksourcecompletion-1.0.so
+%{_includedir}/gtksourcecompletion-1.0
 %{_pkgconfigdir}/gtksourcecompletion-1.0.pc
 
 %files static
+%defattr(644,root,root,755)
 %{_libdir}/libgtksourcecompletion-1.0.a
 
 %files apidocs
