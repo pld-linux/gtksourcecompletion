@@ -2,17 +2,17 @@ Summary:	Source code completion library
 Summary(pl.UTF-8):	Biblioteka dopełniania dla kodu źródłowego
 Name:		gtksourcecompletion
 Version:	0.5.2
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		Applications
-Source0:	http://dl.sourceforge.net/gtksourcecomple/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/gtksourcecomple/%{name}-%{version}.tar.gz
 # Source0-md5:	b031896ce03bef4ca711f9b1e0a34544
 URL:		http://gtksourcecomple.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	flex
-BuildRequires:	gedit2-devel
+BuildRequires:	gedit-devel
 BuildRequires:	glib2-devel >= 1:2.12.0
 BuildRequires:	gtk+2-devel >= 2:2.10.0
 BuildRequires:	libtool
